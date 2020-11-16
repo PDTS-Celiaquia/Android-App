@@ -3,4 +3,10 @@
     <string name="recetas">Recetas</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvTituloReceta">TextView</string>
+    <string name="tvDescripcionReceta">TextView</string>
+    <string name="tvTituloAlimento">TextView</string>
+    <string name="tvDescripcionAlimento">TextView</string>
+    <string name="descripcionImgReceta">imagen ilustrativa de la receta</string>
+    <string name="descripcionImgAlimento">imagen ilustrativa del alimento</string>
 </resources>
