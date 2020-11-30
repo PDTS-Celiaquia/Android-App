@@ -1,4 +1,4 @@
-package com.unmdp.celiaquia
+package com.unmdp.celiaquia.listasderecetas
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.unmdp.celiaquia.R
 import com.unmdp.celiaquia.modelo.RVRecetasAdapter
 import com.unmdp.celiaquia.modelo.Receta
 import java.util.ArrayList
