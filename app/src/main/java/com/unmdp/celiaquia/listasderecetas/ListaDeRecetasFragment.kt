@@ -5,33 +5,38 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.BindingAdapter
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.unmdp.celiaquia.R
+import com.unmdp.celiaquia.databinding.FragmentListaDeRecetasBinding
+import com.unmdp.celiaquia.modelo.Ingrediente
 import com.unmdp.celiaquia.modelo.RVRecetasAdapter
 import com.unmdp.celiaquia.modelo.Receta
+import kotlinx.android.synthetic.main.fragment_lista_de_recetas.*
 import java.util.ArrayList
 
 
 class ListaDeRecetasFragment : Fragment() {
-    private lateinit var rvRecetas: RecyclerView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        var vista: View = inflater.inflate(R.layout.fragment_lista_de_recetas, container, false)
-        rvRecetas = vista.findViewById<RecyclerView>(R.id.rvRecetas)
-        rvRecetas.layoutManager = LinearLayoutManager(context)
-        rvRecetas.adapter = context?.let {
-            RVRecetasAdapter(
-                getRecetas(),
-                it
-            )
-        }
-        return vista
+        val binding: FragmentListaDeRecetasBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_lista_de_recetas, container, false
+        )
+
+        binding.lifecycleOwner = this
+
+        val adapter = ListaDeRecetasAdapter()
+        adapter.submitList(getRecetas())
+        binding.listaRecetas.adapter = adapter
+
+        val manager = LinearLayoutManager(context)
+        binding.listaRecetas.layoutManager = manager
+
+        return binding.root
     }
 
     private fun getRecetas(): ArrayList<Receta> { //deberia solicitar los datos a un web service

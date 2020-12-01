@@ -8,6 +8,6 @@ data class Receta (
     val nombre: String,
     val descripcion: String,
     val rate: Float,
-    val ingredientes: Set<Ingrediente>
+//    val ingredientes: Set<Ingrediente>
 ): Serializable{
 }
