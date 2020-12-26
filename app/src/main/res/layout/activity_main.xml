@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.unmdp.celiaquia.listasderecetas.ListaDeRecetasFragment"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/lista_de_recetas_fragment"
+        android:name="ar.edu.mdp.fi.celiaquia.listasderecetas.ListaDeRecetasFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"

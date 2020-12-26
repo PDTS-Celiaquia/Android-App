@@ -1,13 +1,16 @@
-package com.unmdp.celiaquia.modelo
+package ar.edu.mdp.fi.celiaquia.modelo
 
-import com.unmdp.celiaquia.modelo.Ingrediente
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 
+@Entity
 data class Receta (
+    @PrimaryKey val uid: Int,
     val imagen: Int,
     val nombre: String,
     val descripcion: String,
-    val rate: Float,
+    val rating: Float,
 //    val ingredientes: Set<Ingrediente>
 ): Serializable{
 }

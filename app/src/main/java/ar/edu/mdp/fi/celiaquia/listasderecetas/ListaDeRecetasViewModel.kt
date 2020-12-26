@@ -1,48 +1,23 @@
-package com.unmdp.celiaquia.listasderecetas
+package ar.edu.mdp.fi.celiaquia.listasderecetas
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.BindingAdapter
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.unmdp.celiaquia.R
-import com.unmdp.celiaquia.databinding.FragmentListaDeRecetasBinding
-import com.unmdp.celiaquia.modelo.Ingrediente
-import com.unmdp.celiaquia.modelo.RVRecetasAdapter
-import com.unmdp.celiaquia.modelo.Receta
-import kotlinx.android.synthetic.main.fragment_lista_de_recetas.*
-import java.util.ArrayList
+import android.app.Application
+import androidx.lifecycle.ViewModel
+import ar.edu.mdp.fi.celiaquia.R
+import ar.edu.mdp.fi.celiaquia.database.RecetasDatabaseDao
+import ar.edu.mdp.fi.celiaquia.modelo.Receta
 
+class ListaDeRecetasViewModel(
+    val database: RecetasDatabaseDao,
+    val application: Application
+) : ViewModel() {
 
-class ListaDeRecetasFragment : Fragment() {
+    val list: List<Receta>
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        val binding: FragmentListaDeRecetasBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_lista_de_recetas, container, false
-        )
-
-        binding.lifecycleOwner = this
-
-        val adapter = ListaDeRecetasAdapter()
-        adapter.submitList(getRecetas())
-        binding.listaRecetas.adapter = adapter
-
-        val manager = LinearLayoutManager(context)
-        binding.listaRecetas.layoutManager = manager
-
-        return binding.root
-    }
-
-    private fun getRecetas(): ArrayList<Receta> { //deberia solicitar los datos a un web service
-        val list = ArrayList<Receta>()
+    init {
+        list = ArrayList<Receta>()
         list.add(
             Receta(
+                1,
                 R.drawable.canelones_pollo,
                 "Canelones de pollo",
                 "Belleza en forma de comida",
@@ -51,6 +26,7 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                2,
                 R.drawable.crepes_bn,
                 "Crepes",
                 "Bueno, bonito y barato",
@@ -59,6 +35,7 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                3,
                 R.drawable.empanadillas,
                 "Empanadillas",
                 "Nada como el repulgue de la abuela",
@@ -67,6 +44,7 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                4,
                 R.drawable.ensalada_palta,
                 "Ensalada de palta",
                 "Excelente para comer algo rico y al paso",
@@ -75,6 +53,7 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                5,
                 R.drawable.masa_pizza_sin_gluten,
                 "Masa de pizza sin gluten",
                 "Ideal para sentir que podes comer tacc",
@@ -83,6 +62,7 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                6,
                 R.drawable.pastelchocolate,
                 "Pastel de chocolate",
                 "Para los amantes de lo dulce",
@@ -91,6 +71,7 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                7,
                 R.drawable.tarta_fresas,
                 "Tarta de fresas",
                 "Rico y calculo que saludable",
@@ -99,12 +80,13 @@ class ListaDeRecetasFragment : Fragment() {
         )
         list.add(
             Receta(
+                8,
                 R.drawable.salmorejo,
                 "Salmorejo",
                 "No tengo idea qué vas a cocinar pero está rico",
                 4.5F
             )
         )
-        return list
     }
+
 }

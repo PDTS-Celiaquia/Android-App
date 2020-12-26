@@ -1,4 +1,4 @@
-package com.unmdp.celiaquia
+package ar.edu.mdp.fi.celiaquia
 
 import org.junit.Test
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.unmdp.celiaquia">
+    package="ar.edu.mdp.fi.celiaquia">
 
     <application
         android:allowBackup="true"

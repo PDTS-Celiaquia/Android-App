@@ -1,6 +1,4 @@
-package com.unmdp.celiaquia.modelo
-
-import com.unmdp.celiaquia.modelo.Alimento
+package ar.edu.mdp.fi.celiaquia.modelo
 
 class Ingrediente (
     private val alimento: Alimento,

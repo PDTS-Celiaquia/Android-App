@@ -1,10 +1,10 @@
-package com.unmdp.celiaquia.modelo
+package ar.edu.mdp.fi.celiaquia.modelo
 
 class Alimento (
     private val nombre: String,
     private val clasificacion: String,
     private val genero_especie_variedad: String,
-    private val numero: Integer,
+    private val numero: Int,
     private val energia_kcal: Double,
     private val agua: Double,
     private val proteina: Double,

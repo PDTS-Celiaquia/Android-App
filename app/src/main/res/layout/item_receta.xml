@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data>
+        <variable
+            name="receta"
+            type="ar.edu.mdp.fi.celiaquia.modelo.Receta" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +18,7 @@
 
 
         <ImageView
-            android:id="@+id/ivImagen"
+            android:id="@+id/foto_image"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_marginStart="16dp"
@@ -21,40 +26,43 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:layout_weight="0"
-            android:contentDescription="@string/descripcionImgReceta"
+            android:contentDescription="@string/descripcion_receta_image"
+            android:src="@{receta.imagen}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/tvTitulo"
+            android:id="@+id/nombre_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_weight="0"
-            android:text="@string/tvTituloReceta"
+            android:text="@{receta.nombre}"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/ivImagen"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/foto_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nombre"/>
 
         <TextView
-            android:id="@+id/tvDescripcion"
+            android:id="@+id/descripcion_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:text="@string/tvDescripcionReceta"
+            android:text="@{receta.descripcion}"
             android:textStyle="italic"
-            app:layout_constraintStart_toEndOf="@+id/ivImagen"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+            app:layout_constraintStart_toEndOf="@+id/foto_image"
+            app:layout_constraintTop_toBottomOf="@+id/nombre_text"
+            tools:text="Descripción de la receta"/>
 
         <RatingBar
-            android:id="@+id/rbCalificacion"
+            android:id="@+id/calificacion_ratingbar"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="80dp"
             android:layout_height="17dp"
@@ -62,9 +70,10 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:numStars="5"
-            android:rating="4.5"
+            android:rating="@{receta.rating}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:rating="4.5" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
