@@ -9,9 +9,8 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/lista_de_recetas_fragment"
         android:name="ar.edu.mdp.fi.celiaquia.listasderecetas.ListaDeRecetasFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"

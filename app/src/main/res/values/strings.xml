@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">celiaquia</string>
+    <string name="app_name">Celiaquía</string>
     <string name="recetas">Recetas</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="descripcion_receta_image">imagen ilustrativa de la receta</string>
