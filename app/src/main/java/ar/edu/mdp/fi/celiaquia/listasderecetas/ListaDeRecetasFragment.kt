@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.databinding.BindingAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -50,9 +48,4 @@ class ListaDeRecetasFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-}
-
-@BindingAdapter("android:src")
-fun setImageViewResource(imageView: ImageView, resource: Int) {
-    imageView.setImageResource(resource)
 }
