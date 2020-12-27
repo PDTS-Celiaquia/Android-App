@@ -19,6 +19,7 @@ class ListaDeRecetasAdapter :
 
         fun bind(receta: Receta) {
             binding.receta = receta
+            binding.fotoImage.setImageResource(receta.imagen)
         }
 
         companion object {

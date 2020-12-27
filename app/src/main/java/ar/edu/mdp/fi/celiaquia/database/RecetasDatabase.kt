@@ -9,7 +9,7 @@ import ar.edu.mdp.fi.celiaquia.modelo.Receta
 @Database(entities = [Receta::class], version = 1, exportSchema = false)
 abstract class RecetasDatabase : RoomDatabase() {
 
-    abstract fun recetasDatabaseDao(): RecetasDatabaseDao
+    abstract val recetasDao: RecetasDatabaseDao
 
     companion object {
 
