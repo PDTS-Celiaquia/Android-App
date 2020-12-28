@@ -1,4 +1,4 @@
-package ar.edu.mdp.fi.celiaquia.recetadetail
+package ar.edu.mdp.fi.celiaquia.screens.recetadetail
 
 import android.app.Application
 import androidx.lifecycle.LiveData

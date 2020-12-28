@@ -1,4 +1,4 @@
-package ar.edu.mdp.fi.celiaquia.listasderecetas
+package ar.edu.mdp.fi.celiaquia.screens.listasderecetas
 
 import androidx.recyclerview.widget.DiffUtil
 import ar.edu.mdp.fi.celiaquia.modelo.Receta

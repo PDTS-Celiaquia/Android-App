@@ -1,4 +1,4 @@
-package ar.edu.mdp.fi.celiaquia.listasderecetas
+package ar.edu.mdp.fi.celiaquia.screens.listasderecetas
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,16 +14,13 @@ import ar.edu.mdp.fi.celiaquia.databinding.FragmentListaDeRecetasBinding
 
 class ListaDeRecetasFragment : Fragment() {
 
-    private var _binding: FragmentListaDeRecetasBinding? = null
-    private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentListaDeRecetasBinding
+        val binding: FragmentListaDeRecetasBinding = FragmentListaDeRecetasBinding
             .inflate(inflater, container, false)
 
         val application = requireNotNull(this.activity).application
@@ -59,10 +56,5 @@ class ListaDeRecetasFragment : Fragment() {
         })
 
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

@@ -1,4 +1,4 @@
-package ar.edu.mdp.fi.celiaquia.recetadetail
+package ar.edu.mdp.fi.celiaquia.screens.recetadetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,10 @@ import ar.edu.mdp.fi.celiaquia.database.RecetasDatabase
 import ar.edu.mdp.fi.celiaquia.databinding.FragmentRecetaDetailBinding
 
 class RecetaDetailFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         // Get a reference to the binding object and inflate the fragment views.
         val binding: FragmentRecetaDetailBinding = FragmentRecetaDetailBinding.inflate(
@@ -22,7 +24,11 @@ class RecetaDetailFragment : Fragment() {
         val arguments = RecetaDetailFragmentArgs.fromBundle(requireArguments())
 
         val database = RecetasDatabase.getInstance(application)
-        val viewModelFactory = RecetaDetailViewModelFactory(arguments.recetaId, database, application)
+        val viewModelFactory = RecetaDetailViewModelFactory(
+            arguments.recetaId,
+            database,
+            application
+        )
 
         val viewModel: RecetaDetailViewModel = ViewModelProvider(this, viewModelFactory)
             .get(RecetaDetailViewModel::class.java)
@@ -30,23 +36,12 @@ class RecetaDetailFragment : Fragment() {
         binding.receta = viewModel.receta.value
 
         viewModel.receta.observe(viewLifecycleOwner, {
-            it?.let{ binding.receta = it }
+            it?.let { binding.receta = it }
         })
 
         binding.lifecycleOwner = this
 
-
-//        // Add an Observer to the state variable for Navigating when a Quality icon is tapped.
-//        sleepDetailViewModel.navigateToSleepTracker.observe(this, Observer {
-//            if (it == true) { // Observed state is true.
-//                this.findNavController().navigate(
-//                    SleepDetailFragmentDirections.actionSleepDetailFragmentToSleepTrackerFragment())
-//                // Reset state to make sure we only navigate once, even if the device
-//                // has a configuration change.
-//                sleepDetailViewModel.doneNavigating()
-//            }
-//        })
-
         return binding.root
     }
+
 }

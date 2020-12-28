@@ -8,14 +8,14 @@
 
         <variable
             name="viewModel"
-            type="ar.edu.mdp.fi.celiaquia.listasderecetas.ListaDeRecetasViewModel" />
+            type="ar.edu.mdp.fi.celiaquia.screens.listasderecetas.ListaDeRecetasViewModel" />
     </data>
 
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="ar.edu.mdp.fi.celiaquia.listasderecetas.ListaDeRecetasFragment">
+        tools:context=".screens.listasderecetas.ListaDeRecetasFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recetas_list"
