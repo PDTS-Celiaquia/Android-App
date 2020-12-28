@@ -23,7 +23,6 @@ abstract class RecetasDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: RecetasDatabase? = null
 
-
         fun getInstance(context: Context): RecetasDatabase {
             synchronized(this) {
                 var instance = INSTANCE

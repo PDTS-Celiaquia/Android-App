@@ -6,7 +6,7 @@ import java.io.Serializable
 
 @Entity
 data class Receta (
-    @PrimaryKey val uid: Long,
+    @PrimaryKey val recetaId: Long,
     val imagen: Int,
     val nombre: String,
     val descripcion: String,

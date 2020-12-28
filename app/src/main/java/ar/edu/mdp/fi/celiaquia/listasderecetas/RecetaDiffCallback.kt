@@ -5,7 +5,7 @@ import ar.edu.mdp.fi.celiaquia.modelo.Receta
 
 class RecetaDiffCallback :  DiffUtil.ItemCallback<Receta>() {
         override fun areItemsTheSame(oldItem: Receta, newItem: Receta): Boolean {
-            return oldItem.uid == newItem.uid
+            return oldItem.recetaId == newItem.recetaId
         }
 
         override fun areContentsTheSame(oldItem: Receta, newItem: Receta): Boolean {
