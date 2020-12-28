@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/listaDeRecetasFragment"
-        android:name="ar.edu.mdp.fi.celiaquia.listasderecetas.ListaDeRecetasFragment"
+        android:name="ar.edu.mdp.fi.celiaquia.screens.listasderecetas.ListaDeRecetasFragment"
         android:label="ListaDeRecetasFragment" >
         <action
             android:id="@+id/action_listaDeRecetasFragment_to_recetaFragment"
@@ -13,7 +13,7 @@
     </fragment>
     <fragment
         android:id="@+id/recetaFragment"
-        android:name="ar.edu.mdp.fi.celiaquia.recetadetail.RecetaDetailFragment"
+        android:name="ar.edu.mdp.fi.celiaquia.screens.recetadetail.RecetaDetailFragment"
         android:label="RecetaFragment" >
         <argument
             android:name="recetaId"
