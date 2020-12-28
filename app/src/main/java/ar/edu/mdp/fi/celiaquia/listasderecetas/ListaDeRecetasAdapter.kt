@@ -6,14 +6,19 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.mdp.fi.celiaquia.databinding.ItemRecetaBinding
 import ar.edu.mdp.fi.celiaquia.modelo.Receta
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 
-class ListaDeRecetasAdapter :
-    ListAdapter<Receta, RecyclerView.ViewHolder>(RecetaDiffCallback()) {
+class ListaDeRecetasAdapter(
+    private val clickListener: ListaDeRecetasListener
+) : ListAdapter<Receta, RecyclerView.ViewHolder>(RecetaDiffCallback()) {
 
-    class ViewHolder(val binding: ItemRecetaBinding): RecyclerView.ViewHolder(binding.root){
+    class ViewHolder(private val binding: ItemRecetaBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(receta: Receta) {
+        fun bind(receta: Receta, clickListener: ListaDeRecetasListener) {
             binding.receta = receta
+            binding.clickListener = clickListener
+            binding.executePendingBindings()
         }
 
         companion object {
@@ -27,6 +32,8 @@ class ListaDeRecetasAdapter :
         }
     }
 
+    private val adapterScope = CoroutineScope(Dispatchers.Default)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ViewHolder.from(parent)
     }
@@ -35,7 +42,7 @@ class ListaDeRecetasAdapter :
         when (holder) {
             is ViewHolder -> {
                 val receta = getItem(position) as Receta
-                holder.bind(receta)
+                holder.bind(receta, clickListener)
             }
         }
     }
