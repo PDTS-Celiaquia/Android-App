@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Celiaquía</string>
     <string name="recetas">Recetas</string>
-<!-- TODO: Remove or change this placeholder text -->
     <string name="descripcion_receta_image">imagen ilustrativa de la receta</string>
     <string name="descripcion_alimento_image">imagen ilustrativa del alimento</string>
 </resources>
