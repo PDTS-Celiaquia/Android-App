@@ -6,7 +6,7 @@ import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import ar.edu.mdp.fi.celiaquia.R
-import ar.edu.mdp.fi.celiaquia.modelo.Receta
+import ar.edu.mdp.fi.celiaquia.model.Receta
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

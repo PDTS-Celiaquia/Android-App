@@ -8,7 +8,7 @@
     <data>
         <variable
             name="receta"
-            type="ar.edu.mdp.fi.celiaquia.modelo.Receta" />
+            type="ar.edu.mdp.fi.celiaquia.model.Receta" />
         <variable
             name="clickListener"
             type="ar.edu.mdp.fi.celiaquia.screens.listasderecetas.ListaDeRecetasListener" />

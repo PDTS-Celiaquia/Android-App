@@ -1,7 +1,7 @@
 package ar.edu.mdp.fi.celiaquia.screens.listasderecetas
 
 import androidx.recyclerview.widget.DiffUtil
-import ar.edu.mdp.fi.celiaquia.modelo.Receta
+import ar.edu.mdp.fi.celiaquia.model.Receta
 
 class RecetaDiffCallback :  DiffUtil.ItemCallback<Receta>() {
         override fun areItemsTheSame(oldItem: Receta, newItem: Receta): Boolean {

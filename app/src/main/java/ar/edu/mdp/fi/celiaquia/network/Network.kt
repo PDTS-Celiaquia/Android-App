@@ -1,6 +1,6 @@
 package ar.edu.mdp.fi.celiaquia.network
 
-import ar.edu.mdp.fi.celiaquia.modelo.Receta
+import ar.edu.mdp.fi.celiaquia.model.Receta
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

@@ -2,7 +2,7 @@ package ar.edu.mdp.fi.celiaquia.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import ar.edu.mdp.fi.celiaquia.modelo.Receta
+import ar.edu.mdp.fi.celiaquia.model.Receta
 
 @Dao
 interface RecetasDatabaseDao {

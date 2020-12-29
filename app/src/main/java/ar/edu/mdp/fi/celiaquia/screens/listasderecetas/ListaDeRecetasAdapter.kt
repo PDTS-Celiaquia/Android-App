@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ar.edu.mdp.fi.celiaquia.databinding.ItemRecetaBinding
-import ar.edu.mdp.fi.celiaquia.modelo.Receta
+import ar.edu.mdp.fi.celiaquia.model.Receta
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 

@@ -7,12 +7,12 @@
     <data>
         <variable
             name="receta"
-            type="ar.edu.mdp.fi.celiaquia.modelo.Receta" />
+            type="ar.edu.mdp.fi.celiaquia.model.Receta" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="193dp"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <ImageView
@@ -21,20 +21,21 @@
             android:layout_height="130dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="0"
             android:contentDescription="@string/descripcion_receta_image"
             android:src="@{receta.imagen, default=@drawable/receta_default}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/instrucciones_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/nombre_text"
-            android:layout_width="92dp"
-            android:layout_height="33dp"
+            android:layout_width="230dp"
+            android:layout_height="52dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
@@ -48,11 +49,11 @@
 
         <TextView
             android:id="@+id/descripcion_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="228dp"
+            android:layout_height="56dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
             android:text="@{receta.descripcion}"
             android:textSize="18sp"
             android:textStyle="italic"
@@ -65,14 +66,28 @@
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="80dp"
             android:layout_height="17dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:numStars="5"
             android:rating="@{receta.rating}"
+            app:layout_constraintBottom_toTopOf="@+id/descripcion_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/foto_image"
+            app:layout_constraintStart_toStartOf="@+id/nombre_text"
+            app:layout_constraintTop_toBottomOf="@+id/nombre_text"
             tools:rating="4.5" />
+
+        <TextView
+            android:id="@+id/instrucciones_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion_text" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
