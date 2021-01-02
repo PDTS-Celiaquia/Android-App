@@ -5,6 +5,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAppearanceHeadline5">@style/Headline5</item>
+        <item name="textAppearanceHeadline6">@style/Headline6</item>
+        <item name="textAppearanceBody1">@style/Body1</item>
+        <item name="textAppearanceBody2">@style/Body2</item>
     </style>
+
+    <style name="Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="Headline6" parent="TextAppearance.MaterialComponents.Headline6" />
+
+    <style name="Body1" parent="TextAppearance.MaterialComponents.Body1" />
+
+    <style name="Body2" parent="TextAppearance.MaterialComponents.Body2" />
 
 </resources>

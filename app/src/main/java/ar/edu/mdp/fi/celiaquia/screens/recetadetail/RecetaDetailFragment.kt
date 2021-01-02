@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.text.HtmlCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -41,11 +40,6 @@ class RecetaDetailFragment : Fragment() {
         viewModel.receta.observe(viewLifecycleOwner, {
             it?.let { binding.receta = it }
         })
-
-        binding.instruccionesText.text = HtmlCompat.fromHtml(
-            "<h2>Title</h2><br><p>Description here ${viewModel.receta.value?.descripcion} </p>",
-            HtmlCompat.FROM_HTML_MODE_COMPACT
-        )
 
         binding.lifecycleOwner = this
 

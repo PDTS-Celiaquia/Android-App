@@ -5,90 +5,97 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="receta"
             type="ar.edu.mdp.fi.celiaquia.model.Receta" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/foto_image"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="0"
-            android:contentDescription="@string/descripcion_receta_image"
-            android:src="@{receta.imagen, default=@drawable/receta_default}"
-            app:layout_constraintBottom_toTopOf="@+id/instrucciones_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499"
-            tools:srcCompat="@tools:sample/avatars" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/nombre_text"
-            android:layout_width="230dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="0"
-            android:text="@{receta.nombre}"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/foto_image"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Nombre" />
+            <ImageView
+                android:id="@+id/foto_image"
+                android:layout_width="@dimen/picture_medium"
+                android:layout_height="@dimen/picture_medium"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:contentDescription="@string/descripcion_receta_image"
+                android:src="@{receta.imagen, default=@drawable/receta_default}"
+                app:layout_constraintBottom_toBottomOf="@+id/descripcion_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nombre_text"
+                tools:srcCompat="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/descripcion_text"
-            android:layout_width="228dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="32dp"
-            android:text="@{receta.descripcion}"
-            android:textSize="18sp"
-            android:textStyle="italic"
-            app:layout_constraintStart_toEndOf="@+id/foto_image"
-            app:layout_constraintTop_toBottomOf="@+id/nombre_text"
-            tools:text="Descripción de la receta" />
+            <TextView
+                android:id="@+id/nombre_text"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:text="@{receta.nombre}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foto_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nombre" />
 
-        <RatingBar
-            android:id="@+id/calificacion_ratingbar"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="80dp"
-            android:layout_height="17dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:numStars="5"
-            android:rating="@{receta.rating}"
-            app:layout_constraintBottom_toTopOf="@+id/descripcion_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/foto_image"
-            app:layout_constraintStart_toStartOf="@+id/nombre_text"
-            app:layout_constraintTop_toBottomOf="@+id/nombre_text"
-            tools:rating="4.5" />
+            <RatingBar
+                android:id="@+id/calificacion_ratingbar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:numStars="5"
+                android:rating="@{receta.rating}"
+                app:layout_constraintStart_toEndOf="@+id/foto_image"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_text"
+                tools:rating="4.5" />
 
-        <TextView
-            android:id="@+id/instrucciones_text"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descripcion_text" />
+            <TextView
+                android:id="@+id/descripcion_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:text="@{receta.descripcion}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foto_image"
+                app:layout_constraintTop_toBottomOf="@+id/calificacion_ratingbar"
+                tools:text="Descripción de la receta" />
+
+            <TextView
+                android:id="@+id/instrucciones_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:html="@{receta.instrucciones}"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foto_image"
+                tools:text="Instrucciones de la receta" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="picture_small">65dp</dimen>
+    <dimen name="picture_medium">130dp</dimen>
+    <dimen name="picture_large">260dp</dimen>
+</resources>

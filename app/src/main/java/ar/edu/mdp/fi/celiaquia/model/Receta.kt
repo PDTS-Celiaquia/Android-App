@@ -12,7 +12,7 @@ data class Receta(
     val nombre: String,
     val descripcion: String,
     val rating: Float,
+    val instrucciones: String,
 //    val costo: Int // de 0 a 10
-//    val instrucciones: String
 ) : Serializable {
 }
