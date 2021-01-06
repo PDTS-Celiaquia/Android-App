@@ -14,15 +14,15 @@ class ListaDeRecetasViewModel(
 ) : ViewModel() {
 
     private val repository: RecetasRepository = RecetasRepository(database)
-    val list : LiveData<List<Receta>> = repository.recetas
+    val list: LiveData<List<Receta>> = repository.recetas
 
-    private val _navigateToRecetaDetail = MutableLiveData<Long>()
+    private val _navigateToRecetaDetail = MutableLiveData<Int>()
 
-    val navigateToRecetaDetail: LiveData<Long>
+    val navigateToRecetaDetail: LiveData<Int>
         get() = _navigateToRecetaDetail
 
-    fun onRecetaClicked(recetaId: Long) {
-        _navigateToRecetaDetail.value = recetaId
+    fun onRecetaClicked(idReceta: Int) {
+        _navigateToRecetaDetail.value = idReceta
     }
 
     fun onRecetaDetailNavigated() {

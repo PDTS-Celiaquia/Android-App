@@ -16,7 +16,7 @@
         android:name="ar.edu.mdp.fi.celiaquia.screens.recetadetail.RecetaDetailFragment"
         android:label="RecetaFragment" >
         <argument
-            android:name="recetaId"
-            app:argType="long" />
+            android:name="idReceta"
+            app:argType="integer" />
     </fragment>
 </navigation>

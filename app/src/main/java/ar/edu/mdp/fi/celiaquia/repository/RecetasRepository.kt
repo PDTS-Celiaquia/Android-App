@@ -13,8 +13,8 @@ class RecetasRepository(private val database: RecetasDatabase) {
 
     val recetas: LiveData<List<Receta>> = recetasDao.getAllRecetas()
 
-    fun getReceta(recetaId: Long): LiveData<Receta> {
-        return recetasDao.getReceta(recetaId)
+    fun getReceta(idReceta: Int): LiveData<Receta> {
+        return recetasDao.getReceta(idReceta)
     }
 
     suspend fun refreshRecetas() {

@@ -7,12 +7,12 @@ import java.io.Serializable
 @Entity
 data class Receta(
     // ajeno al dominio, existe para generar persistencia
-    @PrimaryKey val recetaId: Long,
-    val imagen: Int,
+    @PrimaryKey
+    val idReceta: Int,
     val nombre: String,
     val descripcion: String,
-    val rating: Float,
+//    val ingredientes: Set<Ingrediente>,
     val instrucciones: String,
-//    val costo: Int // de 0 a 10
-) : Serializable {
-}
+    val imagen: Int,
+    val rating: Float,
+) : Serializable {}

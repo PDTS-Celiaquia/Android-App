@@ -8,12 +8,12 @@ import ar.edu.mdp.fi.celiaquia.model.Receta
 import ar.edu.mdp.fi.celiaquia.repository.RecetasRepository
 
 class RecetaDetailViewModel(
-    private val recetaId: Long,
+    private val idReceta: Int,
     private val database: RecetasDatabase,
     private val application: Application
 ):  ViewModel() {
 
     private val repository: RecetasRepository = RecetasRepository(database)
 
-    val receta: LiveData<Receta> = repository.getReceta(recetaId)
+    val receta: LiveData<Receta> = repository.getReceta(idReceta)
 }

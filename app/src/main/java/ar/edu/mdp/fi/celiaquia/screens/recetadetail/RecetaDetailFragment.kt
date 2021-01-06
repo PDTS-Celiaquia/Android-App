@@ -27,7 +27,7 @@ class RecetaDetailFragment : Fragment() {
 
         val database = RecetasDatabase.getInstance(application)
         val viewModelFactory = RecetaDetailViewModelFactory(
-            arguments.recetaId,
+            arguments.idReceta,
             database,
             application
         )

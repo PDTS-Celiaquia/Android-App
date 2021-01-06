@@ -80,81 +80,89 @@ abstract class RecetasDatabase : RoomDatabase() {
             list.add(
                 Receta(
                     1,
-                    R.drawable.canelones_pollo,
                     "Canelones de pollo",
                     "Belleza en forma de comida",
+//                    null,
+                    instrucciones,
+                    R.drawable.canelones_pollo,
                     4.5F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     2,
-                    R.drawable.crepes_bn,
                     "Crepes",
                     "Bueno, bonito y barato",
+//                    null,
+                    instrucciones,
+                    R.drawable.crepes_bn,
                     1F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     3,
-                    R.drawable.empanadillas,
                     "Empanadillas",
                     "Nada como el repulgue de la abuela",
+//                    null,
+                    instrucciones,
+                    R.drawable.empanadillas,
                     4.5F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     4,
-                    R.drawable.ensalada_palta,
                     "Ensalada de palta",
                     "Excelente para comer algo rico y al paso",
+//                    null,
+                    instrucciones,
+                    R.drawable.ensalada_palta,
                     2.5F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     5,
-                    R.drawable.masa_pizza_sin_gluten,
                     "Masa de pizza sin gluten",
                     "Ideal para sentir que podes comer tacc",
+//                    null,
+                    instrucciones,
+                    R.drawable.masa_pizza_sin_gluten,
                     4.5F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     6,
-                    R.drawable.pastelchocolate,
                     "Pastel de chocolate",
                     "Para los amantes de lo dulce",
+//                    null,
+                    instrucciones,
+                    R.drawable.pastelchocolate,
                     5F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     7,
-                    R.drawable.tarta_fresas,
                     "Tarta de fresas",
                     "Rico y calculo que saludable",
+//                    null,
+                    instrucciones,
+                    R.drawable.tarta_fresas,
                     4F,
-                    instrucciones
                 )
             )
             list.add(
                 Receta(
                     8,
-                    R.drawable.salmorejo,
                     "Salmorejo",
                     "No tengo idea qué vas a cocinar pero está rico",
+//                    null,
+                    instrucciones,
+                    R.drawable.salmorejo,
                     4.5F,
-                    instrucciones
                 )
             )
             return list.toTypedArray()

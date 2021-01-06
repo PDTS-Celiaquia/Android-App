@@ -9,8 +9,8 @@ interface RecetasDatabaseDao {
     @Query("SELECT * FROM receta")
     fun getAllRecetas(): LiveData<List<Receta>>
 
-    @Query("SELECT * FROM receta WHERE recetaId = :recetaId")
-    fun getReceta(recetaId: Long): LiveData<Receta>
+    @Query("SELECT * FROM receta WHERE idReceta = :idReceta")
+    fun getReceta(idReceta: Int): LiveData<Receta>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg recetas: Receta)

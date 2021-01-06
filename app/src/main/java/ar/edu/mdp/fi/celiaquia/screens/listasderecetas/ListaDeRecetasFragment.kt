@@ -32,8 +32,8 @@ class ListaDeRecetasFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        val adapter = ListaDeRecetasAdapter(ListaDeRecetasListener {
-            recetaId -> viewModel.onRecetaClicked(recetaId)
+        val adapter = ListaDeRecetasAdapter(ListaDeRecetasListener { idReceta ->
+            viewModel.onRecetaClicked(idReceta)
         })
 
         adapter.submitList(viewModel.list.value)

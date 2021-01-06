@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import ar.edu.mdp.fi.celiaquia.database.RecetasDatabase
 
 class RecetaDetailViewModelFactory(
-    private val recetaId: Long,
+    private val idReceta: Int,
     private val database: RecetasDatabase,
     private val application: Application
 ) : ViewModelProvider.Factory {
@@ -14,7 +14,7 @@ class RecetaDetailViewModelFactory(
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(RecetaDetailViewModel::class.java)) {
-            return RecetaDetailViewModel(recetaId, database, application) as T
+            return RecetaDetailViewModel(idReceta, database, application) as T
         }
         throw IllegalAccessException("Unknown ViewModel class")
     }
