@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import ar.edu.mdp.fi.celiaquia.MainActivity
 import ar.edu.mdp.fi.celiaquia.R
 import ar.edu.mdp.fi.celiaquia.database.RecetasDatabase
 import ar.edu.mdp.fi.celiaquia.databinding.FragmentRecetaDetailBinding
@@ -42,7 +43,7 @@ class RecetaDetailFragment : Fragment() {
         })
 
         binding.lifecycleOwner = this
-
+        (activity as MainActivity).supportActionBar?.title = binding.receta?.nombre
         return binding.root
     }
 

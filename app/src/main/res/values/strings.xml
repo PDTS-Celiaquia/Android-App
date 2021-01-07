@@ -3,4 +3,6 @@
     <string name="recetas">Recetas</string>
     <string name="descripcion_receta_image">imagen ilustrativa de la receta</string>
     <string name="descripcion_alimento_image">imagen ilustrativa del alimento</string>
+    <string name="informacion">Información</string>
+    <string name="info_texto"><h3><strong>Universidad Nacional de Mar del Plata</strong></h3></string>
 </resources>
