@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/listaDeRecetasFragment"
+            android:icon="@drawable/ic_baseline_restaurant_menu_24"
+            android:title="@string/recetas" />
+
+<!--        <item-->
+<!--            android:id="@+id/metodoDelPlatoFragment"-->
+<!--            android:icon="@drawable/ic_baseline_food_bank_24"-->
+<!--            android:title="@string/arm_tu_plato" />-->
+    </group>
+    <item android:title="@string/herramientas">
+        <menu>
+            <item
+                android:id="@+id/infoFragment"
+                android:icon="@drawable/ic_baseline_info_24"
+                android:title="@string/acerca_de_nosotros" />
+        </menu>
+    </item>
+</menu>

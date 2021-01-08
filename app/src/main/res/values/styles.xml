@@ -21,4 +21,9 @@
 
     <style name="Body2" parent="TextAppearance.MaterialComponents.Body2" />
 
+    <style name="navigation_view">
+        <item name="android:textColorPrimary">@color/colorGrey</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

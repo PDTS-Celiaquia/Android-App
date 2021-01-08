@@ -5,4 +5,10 @@
     <string name="descripcion_alimento_image">imagen ilustrativa del alimento</string>
     <string name="informacion">Información</string>
     <string name="info_texto"><h3><strong>Universidad Nacional de Mar del Plata</strong></h3></string>
+    <string name="stacc">Logo SIN TACC</string>
+    <string name="content_description">una foto jaja</string>
+    <string name="acerca_de_nosotros">Acerca de nosotros</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="herramientas">Herramientas</string>
+    <string name="arm_tu_plato">Armá tu plato</string>
 </resources>

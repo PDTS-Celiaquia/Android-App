@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import ar.edu.mdp.fi.celiaquia.MainActivity
+import ar.edu.mdp.fi.celiaquia.R
 import ar.edu.mdp.fi.celiaquia.database.RecetasDatabase
 import ar.edu.mdp.fi.celiaquia.databinding.FragmentListaDeRecetasBinding
 
@@ -54,7 +56,7 @@ class ListaDeRecetasFragment : Fragment() {
                 viewModel.onRecetaDetailNavigated()
             }
         })
-
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.recetas)
         return binding.root
     }
 }

@@ -39,11 +39,13 @@ class RecetaDetailFragment : Fragment() {
         binding.receta = viewModel.receta.value
 
         viewModel.receta.observe(viewLifecycleOwner, {
-            it?.let { binding.receta = it }
+            it?.let {
+                binding.receta = it
+                (activity as MainActivity).supportActionBar?.title = it.nombre
+                        }
         })
 
         binding.lifecycleOwner = this
-        (activity as MainActivity).supportActionBar?.title = binding.receta?.nombre
         return binding.root
     }
 
