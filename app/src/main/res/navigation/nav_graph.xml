@@ -30,5 +30,9 @@
         android:id="@+id/metodoDelPlatoFragment"
         android:name="ar.edu.mdp.fi.celiaquia.screens.MetodoDelPlatoFragment"
         android:label="fragment_metodo_del_plato"
-        tools:layout="@layout/fragment_metodo_del_plato" />
+        tools:layout="@layout/fragment_metodo_del_plato" >
+        <action
+            android:id="@+id/action_metodoDelPlatoFragment_to_listaDeRecetasFragment"
+            app:destination="@id/listaDeRecetasFragment" />
+    </fragment>
 </navigation>
