@@ -28,7 +28,7 @@
         tools:layout="@layout/fragment_info" />
     <fragment
         android:id="@+id/metodoDelPlatoFragment"
-        android:name="ar.edu.mdp.fi.celiaquia.screens.MetodoDelPlatoFragment"
+        android:name="ar.edu.mdp.fi.celiaquia.screens.metododelplato.MetodoDelPlatoFragment"
         android:label="fragment_metodo_del_plato"
         tools:layout="@layout/fragment_metodo_del_plato" >
         <action
