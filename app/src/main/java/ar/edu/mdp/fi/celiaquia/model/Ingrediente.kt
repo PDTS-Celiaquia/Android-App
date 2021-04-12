@@ -9,6 +9,8 @@ class Ingrediente(
     val idIngrediente: Int,
     val alimento: Alimento,
     val cantidad: Double,
-    val unidadDeMedida: UnidadDeMedida
+    val unidadDeMedida: UnidadDeMedida,
+    val descripcion: String,
+    val imagenURL: String
 ) {
 }
