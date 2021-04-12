@@ -13,6 +13,6 @@ data class Receta(
     val descripcion: String,
 //    val ingredientes: Set<Ingrediente>,
     val instrucciones: String,
-    val imagen: Int,
+    val imagenURL: String,
     val rating: Float,
 ) : Serializable {}

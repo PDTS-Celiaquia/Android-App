@@ -27,7 +27,7 @@
                 android:layout_marginStart="@dimen/spacing_normal"
                 android:layout_marginLeft="@dimen/spacing_normal"
                 android:contentDescription="@string/descripcion_receta_image"
-                android:src="@{receta.imagen, default=@drawable/receta_default}"
+                app:imageUrl="@{receta.imagenURL}"
                 app:layout_constraintBottom_toBottomOf="@+id/descripcion_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/nombre_text"

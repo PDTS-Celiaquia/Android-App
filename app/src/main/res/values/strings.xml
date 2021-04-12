@@ -11,4 +11,6 @@
     <string name="configuraci_n">Configuración</string>
     <string name="herramientas">Herramientas</string>
     <string name="arm_tu_plato">Armá tu plato</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

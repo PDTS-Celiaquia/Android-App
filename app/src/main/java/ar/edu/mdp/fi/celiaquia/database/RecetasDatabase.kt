@@ -84,7 +84,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Belleza en forma de comida",
 //                    null,
                     instrucciones,
-                    R.drawable.canelones_pollo,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     4.5F,
                 )
             )
@@ -95,7 +95,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Bueno, bonito y barato",
 //                    null,
                     instrucciones,
-                    R.drawable.crepes_bn,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     1F,
                 )
             )
@@ -106,7 +106,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Nada como el repulgue de la abuela",
 //                    null,
                     instrucciones,
-                    R.drawable.empanadillas,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     4.5F,
                 )
             )
@@ -117,7 +117,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Excelente para comer algo rico y al paso",
 //                    null,
                     instrucciones,
-                    R.drawable.ensalada_palta,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     2.5F,
                 )
             )
@@ -128,7 +128,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Ideal para sentir que podes comer tacc",
 //                    null,
                     instrucciones,
-                    R.drawable.masa_pizza_sin_gluten,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     4.5F,
                 )
             )
@@ -139,7 +139,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Para los amantes de lo dulce",
 //                    null,
                     instrucciones,
-                    R.drawable.pastelchocolate,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     5F,
                 )
             )
@@ -150,7 +150,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "Rico y calculo que saludable",
 //                    null,
                     instrucciones,
-                    R.drawable.tarta_fresas,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     4F,
                 )
             )
@@ -161,7 +161,7 @@ abstract class RecetasDatabase : RoomDatabase() {
                     "No tengo idea qué vas a cocinar pero está rico",
 //                    null,
                     instrucciones,
-                    R.drawable.salmorejo,
+                    "https://www.hola.com/imagenes/cocina/recetas/2012082760392/canelones-carne-cinco-pimientas/0-772-427/canelones-adobe-m.jpg",
                     4.5F,
                 )
             )
